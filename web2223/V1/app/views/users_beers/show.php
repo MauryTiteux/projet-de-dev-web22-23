@@ -1,5 +1,5 @@
 <h1>Modifier commentaire</h1>
-<form method="post" action="/users_beers/update.php?id=<?= $view['user_beer']->id ?>">
+<form method="post" action="/users_beers/update.php?id=<?= $view['users_activity']->id ?>">
   <?php foreach ($view['form_fields'] as $f) : ?>
     <div class="form-group">
       <label class="form-label" for="user_beer_<?= $f ?>">
