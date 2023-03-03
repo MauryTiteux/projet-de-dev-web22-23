@@ -77,6 +77,16 @@ class User
   // Validations & persistence.
   // ===========================================================================
 
+    // Check code postal
+  private function validatepostalCode()
+  {
+    if (!preg_match("/^(?:(?:[1-9])(?:\d{3}))$/", $this->postal_code )) {
+      array_push($this->errors, ['invalid_postalCode' => 'Le code postal est invalide.']);
+    }
+  }
+   // /$[1-9]{1}[0-9]{3}^/
+   // /^(?:(?:[1-9])(?:\d{3}))$/
+
   // Check if login already exist in database.
   private function validateUniqueLogin()
   {
@@ -117,6 +127,7 @@ class User
     $this->validateUniqueLogin();
     $this->validateUniqueEmail();
     $this->validatePassword();
+    $this->validatepostalCode();
     return empty($this->errors) ? true : false;
   }
 
