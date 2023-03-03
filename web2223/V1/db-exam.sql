@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 03, 2023 at 12:12 AM
+-- Generation Time: Mar 03, 2023 at 03:50 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.16
 
@@ -167,11 +167,14 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `lastname`, `firstname`, `departments_id`, `postal_code`, `locomotions_id`, `email`, `login`, `password_hash`, `session_token`, `roles_id`) VALUES
 (3, 'Rable', 'Daisy', 1, 1367, 2, 'daisy.rable@supermail.com', 'daisyrable', 'daisy', NULL, 1),
-(4, 'Stique', 'Sophie', 1, 1380, 1, 'sophiestique@boitepro.com', 'sophiestique', 'sophie', NULL, 2),
-(5, 'Mauve', 'Guy', 3, 1435, 5, 'Guy.mauve@monmail.com', 'guymauve', 'guy', NULL, 2),
-(6, 'Fer', 'Lucie', 3, 1000, 2, 'lucie.fer@mail.com', 'Luciefer', 'lucie', NULL, 2),
-(7, 'Balle', 'Jean', 2, 1470, 3, 'Jeanballe@poubellemail.com', 'jeanballe', 'jean', NULL, 2),
-(8, 'Conda', 'Anna', 1, 1000, 4, 'anna.conda@plusdemail.com', 'annaconda', 'anna', NULL, 2);
+(4, 'Stique', 'Sophie', 1, 1380, 1, 'sophiestique@boitepro.com', 'sophiestique', 'sophie', NULL, 1),
+(5, 'Mauve', 'Guy', 3, 1435, 5, 'Guy.mauve@monmail.com', 'guymauve', 'guy', NULL, 1),
+(6, 'Fer', 'Lucie', 3, 1000, 2, 'lucie.fer@mail.com', 'Luciefer', 'lucie', NULL, 1),
+(7, 'Balle', 'Jean', 2, 1470, 3, 'Jeanballe@poubellemail.com', 'jeanballe', 'jean', NULL, 1),
+(8, 'Conda', 'Anna', 1, 1000, 4, 'anna.conda@plusdemail.com', 'annaconda', 'anna', NULL, 2),
+(9, 'azezae', 'azeaze', 2, 1324, 3, 'testest@hotmail.com', 'testtest', '$2y$10$SryLRVt2G/DPtQNKrK4sGuwJ5mrFFUVIlEtro997Rgp1H31ztFIxG', '2faec94b45a2b8a3836824a95756ef89361c32d8212c42c33e656fe9d745fabe', 1),
+(11, 'Marco', 'Polo', 3, 1234, 6, 'testad@hotmail.com', 'testad', '$2y$10$53KvqyDHm9iB9tzwcamXueJZqm19ttZS89tk2UFvcZGO9wceKY4AO', '4743fe1a55e7e21e0938056c62a23da564bc288dc8da5b417315af84a56bba21', 2),
+(12, 'Jean', 'Oskour', 3, 4321, 1, 'test@hotmail.com', 'test', '$2y$10$QZRgxEIltHofahEHipDv5uELQU2ciUt3k0tjd/XEPQV59Jm3Vxgx2', 'b7885ea9d0c8d9fd05da611cfb450d2919fdffa596e88111a955d2091fccf2c1', 1);
 
 --
 -- Indexes for dumped tables
@@ -270,7 +273,7 @@ ALTER TABLE `sessions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
