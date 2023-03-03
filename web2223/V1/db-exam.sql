@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 03, 2023 at 03:50 AM
+-- Generation Time: Mar 03, 2023 at 11:00 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.16
 
@@ -65,7 +65,8 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 (1, 'Atelier cuisine'),
 (2, 'Simulation de courses'),
 (3, 'Course de karting'),
-(4, 'Escape Game');
+(4, 'Escape Game'),
+(5, 'Ne participe pas');
 
 -- --------------------------------------------------------
 
@@ -138,7 +139,8 @@ INSERT INTO `roles` (`id`, `name`) VALUES
 CREATE TABLE `sessions` (
   `id` int(11) NOT NULL,
   `users_id` int(11) NOT NULL,
-  `activity_sessions_id` int(11) NOT NULL
+  `activity_sessions_id` int(11) NOT NULL,
+  `dinner` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -243,7 +245,7 @@ ALTER TABLE `activity_sessions`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `departments`
